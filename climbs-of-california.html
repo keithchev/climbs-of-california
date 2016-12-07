@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>climbs of California</title>
+
+  <link rel="icon"          href="../favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <!-- Bootstrap css -->
+  <link href="./components/bootstrap/bootstrap.min.custom-breakpoint.css" rel="stylesheet">
+  <!--  leaflet css -->
+  <link rel="stylesheet" href="./components/leaflet/leaflet.css" />
+
+</head>
+<body>
+
+  <div class="container" id="main-container">
+
+      <!-- header row -->
+      <div class="row" id="header-container">
+
+          <!-- title -->
+          <div class="col-sm-12">
+              <h1>Climbs of California</h1>
+          </div>
+
+          <!-- tagline text -->
+          <div class="col-sm-9">
+            <p> 
+              An interactive guide to more than 200 road biking climbs in California<br>
+              Hint: Select climbs from the map or list panels to compare their elevation profiles<br>
+              <small>Some data from <a href="http://www.pjammcycling.com">PJAMM</a> and <a href="http://www.rideWithGPS.com">rideWithGPS</a></small> 
+            </p>
+          </div>
+
+          <!-- about/links -->
+          <div class="col-sm-3" style="padding-top: 40px;">
+              <ul class="list-inline">
+                  <li><a href="http://kchev.org">by kchev.org</a></li>
+                  <li>|</li>
+                  <li><a href="_github-link_">repo</a></li>
+              </ul>
+          </div>
+
+      <!-- end row -->
+      </div>
+
+
+      <!-- elevation plot row -->
+      <div class="row">
+          <!-- elevation plot header + container -->
+          <div class="col-sm-12" style="padding-top: 20px;">
+              <!-- plot header and rel/abs tab - mimics structure of main panel tabs -->
+              <div class="col-xs-12 zero-pad-left">
+                  <div class="col-xs-1 plot-button-text">Origin:</div>
+                  <div class="col-xs-1 plot-button" id="button-origin">Absolute</div>
+                  <div class="col-xs-2 plot-button"></div>
+                  <div class="col-xs-1 plot-button-text">Units:</div>
+                  <div class="col-xs-1 plot-button" id="button-units">Miles/feet</div>
+              </div>
+              <!-- elevation plot container -->
+              <div class="col-xs-12 zero-pad-left" id="alt-plot"></div>
+          </div>
+      <!-- end row -->
+      </div>
+
+      <!-- Tables row -->
+      <div class="row">
+
+          <!-- selected climbs list -->
+          <div class="col-sm-4 " style="padding-top: 20px;">
+              <div class="col-sm-12 tab-text zero-pad-left table-header">Selected Climbs</div>
+              <div class="col-sm-12 zero-pad-left" id="climb-list"></div>
+          </div>
+
+          <!-- map/list/mosaic tabs + container -->
+          <div class="col-sm-8 "  style="padding-top: 20px;">
+              <!--- tabs container: along with tab divs, this must be xs and not sm to not collapse on mobile -->
+              <div class="col-xs-12 zero-pad-right zero-pad-left table-header" id="main-panel-tabs"></div>
+              <!-- map/list/mosaic -->
+              <div class="col-sm-12 zero-pad-right zero-pad-left" id="main-panel-container"></div>
+          </div>
+
+      <!-- end row -->
+      </div>   
+
+  </div> <!-- end container -->
+
+
+  <!-- custom style -->
+  <link rel="stylesheet/less" type="text/css" href="styles/climbs-of-california.main.less" />
+
+  <!-- less default options -->
+  <script>
+    less = {
+      env: "development",
+      async: false,
+      fileAsync: false,
+      poll: 1000,
+      functions: {},
+      dumpLineNumbers: "comments",
+      relativeUrls: false,
+      rootpath: ":/a.com/"
+    };
+  </script>
+
+  <!-- third-party components -->
+  <script src="./components/less/less.min.js"></script>
+  <script src="./components/d3.v4/d3.min.js"></script>
+  <script src="./components/d3-tip/index.js"></script>
+  <script src="./components/d3-scale-chromatic.v1.min.js"></script>
+  <script src="./components/leaflet/leaflet.js"></script>
+  <script src="./components/jquery/jquery-3.1.1.min.js"></script>
+
+  <!-- a bit ugly: load the list of climbs in geoJSON as a field in COC -->
+  <script src="./data/climbList.js"></script>
+
+  <!-- main script -->
+  <script src="./scripts/coc.main.js"></script>
+
+  <script></script>
+
+<a href="">
+  <img style="position: absolute; top: 0; right: 0; border: 0; width: 100px; height: 100px;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+</a>
+
+
+</body>
+</html>

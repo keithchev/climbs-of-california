@@ -1,0 +1,170 @@
+@link-color: #4682b4;
+@header-bgcolor: #eee;
+
+@orange: #ffd040;
+@lgray: #eee;
+@dgray: #333;
+
+@border-color: #ddd;
+@border-width: 3px;
+
+@button-color: #eee;
+@button-color-hover: #f7f7f7;
+@button-color-selected: #ddd;
+
+body { padding-top: 0px; }
+
+div { border: 0px solid #ff6666; }
+svg { border: 0px solid #6666ff; }
+
+a         { color: @link-color; text-decoration: none; }
+a:hover   { color: @link-color - #333; text-decoration: none; }
+a:visited { color: @link-color; text-decoration: none; }
+
+
+
+.table { 
+  margin-bottom: 0px;
+}
+
+.zero-pad-left { padding-left: 0px; }
+.zero-pad-right { padding-right: 0px; }
+
+.div {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.row-centered {
+  text-align: center;
+}
+
+#main-container {
+  max-width: 800px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+#header-container {
+  background-color: @header-bgcolor;
+  border-bottom: 3px solid @border-color;
+}
+
+.table-header {
+  border-bottom: @border-width solid @border-color;
+  background-color: @button-color;
+  text-align: center;
+  }
+
+
+// ------------------------------------------------------
+// 
+// div buttons
+//
+// ------------------------------------------------------
+
+.tab-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.plot-button-text{
+  font-weight: bold;
+  font-size: 12px;
+  padding-left: 0px;
+  padding-right: 10px;
+  width: auto;
+}
+
+.plot-button {
+  color: @link-color;
+  cursor: pointer;
+  &:hover {background-color: @button-color-hover; }
+  .plot-button-text
+}
+
+.plot-button-selected {
+  background-color: @button-color-selected;
+}
+
+.tab {
+  width: 90px;
+  cursor: pointer;
+  color: @link-color;
+  text-align: center;
+  background-color: @button-color;
+  border-right: 0px solid #fff;
+  &:hover {background-color: @button-color-hover;
+  }
+  .tab-text;
+}
+
+.tab-selected {
+  background-color: @button-color-selected; 
+}
+
+#button-relative-absolute {
+  width: 150px;
+  text-align: center;
+}
+
+
+// ------------------------------------------------------
+// 
+// plots
+//
+// ------------------------------------------------------
+
+.axis { shape-rendering: crispEdges; }
+path { shape-rendering: auto; }
+rect { shape-rendering: crispEdges; }
+
+.axis-label {font-size: 10px; }
+
+#y-axis-alt line { stroke: #ccc; }
+#y-axis-alt path { stroke: #fff; }
+
+
+
+// ------------------------------------------------------
+// 
+// tables
+//
+// ------------------------------------------------------
+
+// force table head padding
+.table>thead>tr>th  { 
+  padding-bottom: 2px; 
+}
+
+.tr-hover {
+  background-color: #f7f7f7;
+}
+
+// main table td
+.all-climbs-td {
+  font-size: 12px;
+}
+
+// selected climbs table - adjusted to minimize table width
+.selected-climbs-padding {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.selected-climbs-th {
+  font-size: 12px;
+  .selected-climbs-padding;
+}
+
+.selected-climbs-td {
+  font-size: 11px;
+  .selected-climbs-padding;
+}
+
+
+
+
+
+
+
+
