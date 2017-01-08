@@ -21,14 +21,14 @@ a         { color: @link-color; text-decoration: none; }
 a:hover   { color: @link-color - #333; text-decoration: none; }
 a:visited { color: @link-color; text-decoration: none; }
 
-
-
 .table { 
   margin-bottom: 0px;
 }
 
 .zero-pad-left { padding-left: 0px; }
 .zero-pad-right { padding-right: 0px; }
+
+.pad-top {padding-top: 20px;}
 
 .div {
   padding-left: 30px;
@@ -38,7 +38,13 @@ a:visited { color: @link-color; text-decoration: none; }
   text-align: center;
 }
 
-#main-container {
+// ------------------------------------------------------
+// 
+// header
+//
+// ------------------------------------------------------
+
+.main-container {
   max-width: 800px;
   padding-top: 30px;
   padding-bottom: 100px;
@@ -47,6 +53,13 @@ a:visited { color: @link-color; text-decoration: none; }
 #header-container {
   background-color: @header-bgcolor;
   border-bottom: 3px solid @border-color;
+}
+
+#header-links-container {
+  padding-top: 40px;
+  @media(max-width: 768px) {
+    padding-top: 0px;
+  }
 }
 
 .table-header {
@@ -62,12 +75,15 @@ a:visited { color: @link-color; text-decoration: none; }
 //
 // ------------------------------------------------------
 
-.tab-text {
-  font-weight: bold;
-  font-size: 14px;
+
+.plot-button {
+  color: @link-color;
+  cursor: pointer;
+  &:hover {background-color: @button-color-hover; }
+  .plot-button-label
 }
 
-.plot-button-text{
+.plot-button-label{
   font-weight: bold;
   font-size: 12px;
   padding-left: 0px;
@@ -75,16 +91,11 @@ a:visited { color: @link-color; text-decoration: none; }
   width: auto;
 }
 
-.plot-button {
-  color: @link-color;
-  cursor: pointer;
-  &:hover {background-color: @button-color-hover; }
-  .plot-button-text
-}
-
 .plot-button-selected {
   background-color: @button-color-selected;
 }
+
+
 
 .tab {
   width: 90px;
@@ -96,6 +107,11 @@ a:visited { color: @link-color; text-decoration: none; }
   &:hover {background-color: @button-color-hover;
   }
   .tab-text;
+}
+
+.tab-text {
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .tab-selected {
