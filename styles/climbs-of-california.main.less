@@ -12,10 +12,17 @@
 @button-color-hover: #f7f7f7;
 @button-color-selected: #ddd;
 
-body { padding-top: 0px; }
+.main-font {
+  font-family: "Roboto", sans-serif;
+}
 
-div { border: 0px solid #ff6666; }
+html { .main-font; }
+
+body { padding-top: 0px; .main-font; }
+
+div { border: 0px solid #ff6666; .main-font; }
 svg { border: 0px solid #6666ff; }
+
 
 a         { color: @link-color; text-decoration: none; }
 a:hover   { color: @link-color - #333; text-decoration: none; }
@@ -94,8 +101,6 @@ a:visited { color: @link-color; text-decoration: none; }
 .plot-button-selected {
   background-color: @button-color-selected;
 }
-
-
 
 .tab {
   width: 90px;
