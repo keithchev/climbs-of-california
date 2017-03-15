@@ -549,15 +549,4 @@ Array.prototype.copy = function(){
     return this.slice(0);
 }
 
-Array.prototype.unique = function() {
-  var elementsAsKeys = {},
-      uniqueElements = [];
-  for (var i = 0; i < this.length; ++i) {
-      if (!elementsAsKeys.hasOwnProperty(this[i])) {
-          uniqueElements.push(this[i]);
-          elementsAsKeys[this[i]] = 1; // arbitrary value
-      }
-  }
-  return uniqueElements;
-}
 
